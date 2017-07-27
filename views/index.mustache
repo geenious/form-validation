@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forms Activity</title>
+    <link rel="stylesheet" href="/master.css">
+  </head>
+  <body>
+    <h1>Oh, hello there</h1>
+
+    <form class="" action="/signup" method="post">
+      <fieldset>
+        <input type="text" name="name"  value="{{formData.name}}" placeholder="Name...">
+        <input type="text" name="email" value="{{formData.email}}" placeholder="Email...">
+        <input type="number" name="birth" value="{{formData.birth}}" placeholder="Year of Birth...">
+        <fieldset>
+          <legend>Choose your position</legend>
+
+          <input type="checkbox" name="position" value='Technical Manager'>
+          <label>Technical Manager</label>
+
+          <input type="checkbox" name='position' value='Developer'>
+          <label>Developer</label>
+
+          <input type="checkbox" name="position" value="UI Designer">
+          <label>UI Designer</label>
+
+          <input type="checkbox" name="position" value="Graphic Design">
+          <label>Graphic Designer</label>
+        </fieldset>
+        <input type="password" name="password" placeholder="Password..." value="">
+      </fieldset>
+      <button type="submit">Tuna!</button>
+    </form>
+    <ul>
+      {{#errors}}
+        <li>{{msg}}</li>
+      {{/errors}}
+    </ul>
+  </body>
+</html>
